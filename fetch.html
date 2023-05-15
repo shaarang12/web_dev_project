@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    
+    <style>
+        table {
+            width: auto;
+        }
+        table, th, td {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="myApp" 
+        ng-controller="myController">
+
+        <table>
+            <tr>
+                <th>ID</th>
+                    <th>Book Title</th>
+                        <th>Author Name</th>
+                        <th>Release Year</th>
+                        <th>Book Price</th>
+            </tr>
+
+            <tr ng-repeat="Books in List">
+                <td>{{books.ID}}</td>
+                    <td>{{books.Title}}</td>
+                        <td>{{books.Author}}</td>
+                        <td>{{books.Year}}</td>
+                        <td>{{books.Price}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<!--The Controller-->
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myController',
+        function ($scope, $http) {
+
+            var request = {
+                method: 'get',
+                url: 'https://list-of-books.s3.ap-south-1.amazonaws.com/books.json',
+                dataType: 'json',
+                contentType: "application/json"
+            };
+
+            $scope.arrBooks = new Array;
+
+            $http(request)
+                .success(function (jsonData) {
+                    $scope.arrBooks = jsonData;
+                    $scope.list = $scope.arrBooks;
+                })
+                .error(function () {
+
+                });
+        });
+</script>
+</html>

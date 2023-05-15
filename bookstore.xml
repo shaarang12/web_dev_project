@@ -1,0 +1,52 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type = "text/xsl" href ="style.xsl"?>
+<bookstore>
+	<book category="cooking">
+		<title lang="en">Everyday Italian</title>
+		<author>Giada De Laurentiis</author>
+		<year>2005</year>
+		<price>30.00</price>
+	</book>
+	<book category="children">
+		<title lang="en">Harry Potter</title>
+		<author>J K. Rowling</author>
+		<year>2005</year>
+		<price>29.99</price>
+	</book>
+	<book category="web">
+		<title lang="en">Let Us C</title>
+		<author>Ramesh Gaonkar</author>
+		<year>2005</year>
+		<price>500.99</price>
+	</book>
+	<book category="web" cover="paperback">
+		<title lang="en">Learning XML</title>
+		<author>Erik T. Ray</author>
+		<year>2003</year>
+		<price>39.95</price>
+	</book>
+    <book category="fiction" cover="pdf">
+		<title lang="en">The White Tiger</title>
+		<author>Arvind Adiga</author>
+		<year>2001</year>
+		<price>120.99</price>
+	</book>
+    <book category="fiction" cover="hardcover">
+		<title lang="en">Gulliver's Travels</title>
+		<author>Oliver Twist</author>
+		<year>1970</year>
+		<price>400.99</price>
+	</book>
+    <book category="fiction" cover="hardcover">
+		<title lang="en">Candy is Dandy</title>
+		<author>Ogden Nash</author>
+		<year>2013</year>
+		<price>300.00</price>
+	</book>
+	<book category="fiction" cover="paperback">
+		<title lang="en">Percy Jackson</title>
+		<author>Rick Riordan</author>
+		<year>2009</year>
+		<price>150.00</price>
+	</book>
+</bookstore>

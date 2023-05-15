@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE bookstore [
+<!ELEMENT details (@category,title,author,year,price)>
+<!ELEMENT @category(#PCDATA)>
+<!ELEMENT title(#PCDATA)>
+<!ELEMENT author(#PCDATA)>
+<!ELEMENT year(#PCDATA)>
+<!ELEMENT price(#PCDATA)>
+]>
